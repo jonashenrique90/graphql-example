@@ -1,0 +1,14 @@
+query Books($searchQuery: String, $cursor: String, $first: Int!) {
+	books(searchQuery: $searchQuery, cursor: $cursor, first: $first) {
+		books {
+			id
+			title
+			author
+		}
+		hasNextPage
+	}
+}
+
+mutation removeBook($id: String!) {
+	removeBook(id: $id)
+}
